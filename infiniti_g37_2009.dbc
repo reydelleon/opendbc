@@ -48,9 +48,47 @@ BO_ 1762 NEW_MSG_2: 8 XXX
 BO_ 533 AC: 8 XXX
  SG_ AC LED ON/OFF : 15|8@0+ (1,0) [0|255] "ON/OFF" XXX
 
-BO_ 640 Vehicle Speed: 8 XXX
+BO_ 640 VEHICLE_SPEED: 8 XXX
+ SG_ Speed : 39|16@0+ (1,0) [0|65535] "" XXX
+
+BO_ 2 STEERING: 8 XXX
+ SG_ Steering Angle : 7|16@0+ (1,0) [0|65535] "" XXX
+
+BO_ 352 ENGINE_STUFF: 8 XXX
+ SG_ Sensor Data (related to throttle position) : 23|8@0+ (1,0) [0|255] "" XXX
+
+BO_ 384 THROTTLE_FUEL_SYSTEM: 8 XXX
+ SG_ Engine RPM : 7|16@0+ (1,0) [0|65535] "RPM" XXX
+ SG_ Throttle Position : 47|8@0+ (1,0) [0|255] "" XXX
+
+BO_ 505 POWERTRAIN: 8 XXX
+ SG_ Engine RPM : 23|16@0+ (1,0) [0|65535] "RPM" XXX
+
+BO_ 852 SENSOR_DATA: 8 XXX
+ SG_ Traction Control System : 39|8@0+ (1,0) [0|255] "ON/OFF" XXX
+ SG_ Brake Pedal Depressed : 55|8@0+ (1,0) [0|255] "ON/OFF" XXX
+ SG_ Vehicle Speed : 7|16@0+ (1,0) [0|65535] "" XXX
+
+BO_ 853 SENSOR_DATA: 8 XXX
+ SG_ Vehicle Speed 1 : 7|16@0+ (1,0) [0|65535] "" XXX
+ SG_ Vehicle Speed 2 : 23|16@0+ (1,0) [0|65535] "" XXX
+
+BO_ 861 ACCESSORIES: 8 XXX
+ SG_ Wipers : 23|8@0+ (1,0) [0|255] "" XXX
+ SG_ Car Movement : 39|8@0+ (1,0) [0|255] "" XXX
+
+BO_ 1361 SENSOR_DATA: 8 XXX
+ SG_ Cruise control set point (Kph), cruise control active : 39|8@0+ (1,0) [0|255] "" XXX
+ SG_ Cruise Control Status : 47|8@0+ (1,0) [0|255] "" XXX
 
 
 
 
 CM_ SG_ 533 AC LED ON/OFF "240 OFF/248 ON";
+CM_ SG_ 505 Engine RPM "(21,74) = Idle";
+CM_ SG_ 852 Traction Control System "0 OFF/ 64 ON";
+CM_ SG_ 852 Brake Pedal Depressed "4 Brake Off/ 20 Brake depressed";
+CM_ SG_ 861 Wipers "0 | 64 - wiper pulse | 192 - wiper 1 pulse (up) | 192 - continuous wiper | 224 - fast continuous wiper";
+CM_ SG_ 861 Car Movement "16 - car stopped | 64 - car moving | ?? - brake pressed";
+CM_ SG_ 1361 Cruise control set point (Kph), cruise control active "255 - Cruise control master off | 254 - Cruise control master on, cruise control disengaged";
+CM_ SG_ 1361 Cruise Control Status "0x02 / 2 - Cruise control master off | 0x62 / 82 - Cruise control master on | 0x42 / 66 - Cruise control engaged";

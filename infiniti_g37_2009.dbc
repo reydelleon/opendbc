@@ -48,8 +48,9 @@ BO_ 1762 NEW_MSG_2: 8 XXX
 BO_ 533 AC: 8 XXX
  SG_ AC LED ON/OFF : 15|8@0+ (1,0) [0|255] "ON/OFF" XXX
 
-BO_ 640 VEHICLE_SPEED: 8 XXX
+BO_ 640 UNKNOWN: 8 XXX
  SG_ Speed : 39|16@0+ (1,0) [0|65535] "" XXX
+ SG_ Driver Seatbelt : 7|8@0+ (1,0) [0|255] "" XXX
 
 BO_ 2 STEERING: 8 XXX
  SG_ Steering Angle : 7|16@0+ (1,0) [0|65535] "" XXX
@@ -61,25 +62,56 @@ BO_ 384 ECM: 8 XXX
  SG_ Engine RPM : 7|16@0+ (1,0) [0|65535] "RPM" XXX
  SG_ Throttle Position : 47|8@0+ (1,0) [0|255] "" XXX
 
-BO_ 505 POWERTRAIN: 8 XXX
+BO_ 505 ECM: 8 XXX
  SG_ Engine RPM : 23|16@0+ (1,0) [0|65535] "RPM" XXX
 
-BO_ 852 SENSOR_DATA: 8 XXX
+BO_ 852 ABS: 8 XXX
  SG_ Traction Control System : 39|8@0+ (1,0) [0|255] "ON/OFF" XXX
  SG_ Brake Pedal Depressed : 55|8@0+ (1,0) [0|255] "ON/OFF" XXX
  SG_ Vehicle Speed : 7|16@0+ (1,0) [0|65535] "" XXX
 
-BO_ 853 SENSOR_DATA: 8 XXX
+BO_ 853 UNKNOWN: 8 XXX
  SG_ Vehicle Speed 1 : 7|16@0+ (1,0) [0|65535] "" XXX
  SG_ Vehicle Speed 2 : 23|16@0+ (1,0) [0|65535] "" XXX
+ SG_ Display Units : 39|8@0+ (1,0) [0|255] "" XXX
 
 BO_ 861 ACCESSORIES: 8 XXX
  SG_ Wipers : 23|8@0+ (1,0) [0|255] "" XXX
- SG_ Car Movement : 39|8@0+ (1,0) [0|255] "" XXX
+ SG_ Car Moving Forward : 39|8@0+ (1,0) [0|255] "" XXX
 
 BO_ 1361 SENSOR_DATA: 8 XXX
- SG_ Cruise control set point (Kph), cruise control active : 39|8@0+ (1,0) [0|255] "" XXX
  SG_ Cruise Control Status : 47|8@0+ (1,0) [0|255] "" XXX
+ SG_ Engine Coolant Temperature : 7|8@0+ (1,0) [0|255] "" XXX
+ SG_ Cruise control set point (Kph), cruise control active : 39|8@0+ (1,0) [0|255] "" XXX
+
+BO_ 386 ECM: 8 XXX
+ SG_ Throttle Position : 39|8@0+ (1,0) [0|255] "" XXX
+ SG_ Break Light? : 55|8@0+ (1,0) [0|255] "" XXX
+
+BO_ 534 IGNITION: 8 XXX
+ SG_ Ignition Button Status : 7|8@0+ (1,0) [0|255] "" XXX
+
+BO_ 644 WHEEL_SPEED: 8 XXX
+ SG_ Front Right Wheel Speed : 7|16@0+ (1,0) [0|255] "" XXX
+ SG_ Front Left Wheel Speed : 23|16@0+ (1,0) [0|65535] "" XXX
+ SG_ Vehicle Speed : 39|16@0+ (1,0) [0|65535] "" XXX
+
+BO_ 645 WHEEL_SPEED: 8 XXX
+ SG_ Rear Right Wheel Speed : 7|16@0+ (1,0) [0|65535] "" XXX
+ SG_ Rear Left Wheel Speed : 23|16@0+ (1,0) [0|65535] "" XXX
+
+BO_ 658 UNKNOWN: 8 XXX
+ SG_ Battery Voltage? : 31|8@0+ (1,0) [0|255] "" XXX
+ SG_ Break Pedal Position : 55|8@0+ (1,0) [0|255] "" XXX
+
+BO_ 856 UNKNOWN: 8 XXX
+ SG_ Headlights : 15|8@0+ (1,0) [0|255] "ON/OFF" XXX
+
+BO_ 901 NEW_MSG_3: 8 XXX
+ SG_ Tire Pressure 1 : 23|8@0+ (1,0) [0|255] "Percent" XXX
+ SG_ Tire Pressure 2 : 31|8@0+ (1,0) [0|255] "" XXX
+ SG_ Tire Pressure 3 : 39|8@0+ (1,0) [0|255] "" XXX
+ SG_ Tire Pressure 4 : 47|8@0+ (1,0) [0|255] "" XXX
 
 
 
@@ -88,7 +120,15 @@ CM_ SG_ 533 AC LED ON/OFF "240 OFF/248 ON";
 CM_ SG_ 505 Engine RPM "(21,74) = Idle";
 CM_ SG_ 852 Traction Control System "0 OFF/ 64 ON";
 CM_ SG_ 852 Brake Pedal Depressed "4 Brake Off/ 20 Brake depressed";
+CM_ SG_ 853 Display Units "0 Metric | 1 english";
 CM_ SG_ 861 Wipers "0 | 64 - wiper pulse | 192 - wiper 1 pulse (up) | 192 - continuous wiper | 224 - fast continuous wiper";
-CM_ SG_ 861 Car Movement "16 - car stopped | 64 - car moving | ?? - brake pressed";
-CM_ SG_ 1361 Cruise control set point (Kph), cruise control active "255 - Cruise control master off | 254 - Cruise control master on, cruise control disengaged";
+CM_ SG_ 861 Car Moving Forward "16 - car stopped | 64 - car moving | ?? - brake pressed";
 CM_ SG_ 1361 Cruise Control Status "0x02 / 2 - Cruise control master off | 0x62 / 82 - Cruise control master on | 0x42 / 66 - Cruise control engaged";
+CM_ SG_ 1361 Cruise control set point (Kph), cruise control active "255 - Cruise control master off | 254 - Cruise control master on, cruise control disengaged | 255: CC master off, 254: CC master on/inactive | All others: speed in kmh (divide by 1.60934 for mph)";
+CM_ SG_ 386 Throttle Position "Independent of gas pedal because S-mode/cruise control can control it";
+CM_ SG_ 644 Front Right Wheel Speed "Divide by 160.934*2 for MPH";
+CM_ SG_ 644 Front Left Wheel Speed "Divide by 160.934*2 for MPH";
+CM_ SG_ 644 Vehicle Speed "Divide by 160.934*2 for MPH";
+CM_ SG_ 645 Rear Right Wheel Speed "Divide by 160.934*2 for MPH";
+CM_ SG_ 645 Rear Left Wheel Speed "Divide by 160.934*2 for MPH";
+CM_ SG_ 856 Headlights "0 OFF | 1 ON";

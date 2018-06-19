@@ -42,10 +42,14 @@ BO_ 421 NEW_MSG_1: 8 XXX
 BO_ 1762 NEW_MSG_2: 8 XXX
  SG_ NEW_SIGNAL_1 : 7|24@0+ (1,0) [0|255] "" XXX
 
-BO_ 2 NEW_MSG_3: 8 XXX
- SG_ NEW_SIGNAL_1 : 7|16@0+ (1,0) [0|65535] "" XXX
- SG_ NEW_SIGNAL_2 : 23|16@0+ (1,0) [0|65535] "" XXX
- SG_ RPM : 7|24@0+ (1,0) [0|16777215] "" XXX
+BO_ 2 Steering Sensors: 8 XXX
+ SG_ NEW_SIGNAL_3 : 15|8@0+ (1,0) [0|255] "" XXX
+ SG_ NEW_SIGNAL_1 : 23|8@0+ (1,0) [0|255] "" XXX
+ SG_ NEW_SIGNAL_2 : 31|8@0+ (1,0) [0|255] "" XXX
+ SG_ NEW_SIGNAL_4 : 39|8@0+ (1,0) [0|255] "" XXX
+ SG_ Steering Wheel Angle : 7|8@0+ (1,0) [0|65535] "RPM" XXX
 
-BO_ 384 Engine RPM: 8 XXX
- SG_ RPM : 7|16@0+ (1,0) [0|65535] "RPM" XXX
+BO_ 384 NEW_MSG_4: 8 XXX
+ SG_ NEW_SIGNAL_2 : 39|16@0+ (1,0) [0|65535] "" XXX
+ SG_ NEW_SIGNAL_3 : 55|16@0+ (1,0) [0|65535] "" XXX
+ SG_ NEW_SIGNAL_1 : 23|16@0+ (1,0) [0|65535] "" XXX

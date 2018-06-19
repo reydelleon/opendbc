@@ -48,6 +48,8 @@ BO_ 1762 NEW_MSG_2: 8 XXX
 BO_ 533 AC: 8 XXX
  SG_ AC LED ON/OFF : 15|8@0+ (1,0) [0|255] "ON/OFF" XXX
 
+BO_ 640 Vehicle Speed: 8 XXX
+
 
 
 

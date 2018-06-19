@@ -33,26 +33,22 @@ NS_ :
 
 BS_:
 
-BU_: XXX
+BU_: XXX 
 
 
 BO_ 421 NEW_MSG_1: 8 XXX
  SG_ NEW_SIGNAL_1 : 0|16@1+ (1,0) [0|255] "" XXX
 
 BO_ 1762 NEW_MSG_2: 8 XXX
- SG_ NEW_SIGNAL_1 : 7|24@0+ (1,0) [0|255] "" XXX
- SG_ Unknown : 39|8@0+ (1,0) [0|255] "" XXX
-
-BO_ 384 Throttle/Fuel system: 8 XXX
- SG_ NEW_SIGNAL_3 : 55|16@0+ (1,0) [0|65535] "" XXX
  SG_ NEW_SIGNAL_1 : 23|16@0+ (1,0) [0|65535] "" XXX
- SG_ Engine RPM : 7|16@0+ (1,0) [0|65535] "" XXX
- SG_ Throttle pedal position : 47|8@0+ (1,0) [0|65535] "%" XXX
+ SG_ Unknown : 39|8@0+ (1,0) [0|255] "" XXX
+ SG_ NEW_SIGNAL_3 : 55|16@0+ (1,0) [0|65535] "" XXX
+ SG_ E : NaN|NaN@0+ (NaN,7) [NaN|1] "6" ,
 
-BO_ 352 Engine Load?: 8 XXX
- SG_ Throttle Position (related) : 23|8@0+ (1,0) [0|255] "" XXX
+BO_ 533 AC: 8 XXX
+ SG_ AC LED ON/OFF : 15|8@0+ (1,0) [0|255] "ON/OFF" XXX
 
 
 
 
-CM_ SG_ 384 Throttle pedal position "(F/255 * 100)";
+CM_ SG_ 533 AC LED ON/OFF "240 OFF/248 ON";

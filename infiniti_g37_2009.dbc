@@ -44,10 +44,15 @@ BO_ 1762 NEW_MSG_2: 8 XXX
  SG_ Unknown : 39|8@0+ (1,0) [0|255] "" XXX
 
 BO_ 384 Throttle/Fuel system: 8 XXX
- SG_ NEW_SIGNAL_2 : 39|16@0+ (1,0) [0|65535] "" XXX
  SG_ NEW_SIGNAL_3 : 55|16@0+ (1,0) [0|65535] "" XXX
  SG_ NEW_SIGNAL_1 : 23|16@0+ (1,0) [0|65535] "" XXX
  SG_ Engine RPM : 7|16@0+ (1,0) [0|65535] "" XXX
+ SG_ Throttle pedal position : 47|8@0+ (1,0) [0|65535] "%" XXX
 
 BO_ 352 Engine Load?: 8 XXX
  SG_ Throttle Position (related) : 23|8@0+ (1,0) [0|255] "" XXX
+
+
+
+
+CM_ SG_ 384 Throttle pedal position "(F/255 * 100)";

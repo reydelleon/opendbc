@@ -41,13 +41,12 @@ BO_ 421 NEW_MSG_1: 8 XXX
 
 BO_ 1762 NEW_MSG_2: 8 XXX
  SG_ NEW_SIGNAL_1 : 7|24@0+ (1,0) [0|255] "" XXX
-
-BO_ 2 Steering Sensors: 8 XXX
- SG_ Steering Wheel Angle : 7|16@0+ (1,0) [0|65535] "RPM" XXX
- SG_ Angular Velocity of Steering Wheel : 23|8@0+ (1,0) [0|255] "" XXX
  SG_ Unknown : 39|8@0+ (1,0) [0|255] "" XXX
 
 BO_ 384 NEW_MSG_4: 8 XXX
  SG_ NEW_SIGNAL_2 : 39|16@0+ (1,0) [0|65535] "" XXX
  SG_ NEW_SIGNAL_3 : 55|16@0+ (1,0) [0|65535] "" XXX
  SG_ NEW_SIGNAL_1 : 23|16@0+ (1,0) [0|65535] "" XXX
+
+BO_ 352 Engine Load?: 8 XXX
+ SG_ Throttle Position (related) : 23|8@0+ (1,0) [0|255] "" XXX

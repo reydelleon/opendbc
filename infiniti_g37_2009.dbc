@@ -57,7 +57,7 @@ BO_ 2 STEERING: 8 XXX
 BO_ 352 ENGINE_STUFF: 8 XXX
  SG_ Sensor Data (related to throttle position) : 23|8@0+ (1,0) [0|255] "" XXX
 
-BO_ 384 THROTTLE_FUEL_SYSTEM: 8 XXX
+BO_ 384 ECM: 8 XXX
  SG_ Engine RPM : 7|16@0+ (1,0) [0|65535] "RPM" XXX
  SG_ Throttle Position : 47|8@0+ (1,0) [0|255] "" XXX
 

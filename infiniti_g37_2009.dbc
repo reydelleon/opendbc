@@ -33,7 +33,7 @@ NS_ :
 
 BS_:
 
-BU_: XXX 
+BU_: XXX
 
 
 BO_ 421 NEW_MSG_1: 8 XXX
@@ -45,8 +45,7 @@ BO_ 1762 NEW_MSG_2: 8 XXX
 BO_ 2 NEW_MSG_3: 8 XXX
  SG_ NEW_SIGNAL_1 : 7|16@0+ (1,0) [0|65535] "" XXX
  SG_ NEW_SIGNAL_2 : 23|16@0+ (1,0) [0|65535] "" XXX
- SG_ RPM : 7|24@0+ (1,0) [0|65535] "" XXX
- SG_ E : NaN|NaN@0+ (NaN,7) [NaN|2] "4" ,
+ SG_ RPM : 7|24@0+ (1,0) [0|16777215] "" XXX
 
 BO_ 384 Engine RPM: 8 XXX
- SG_ RPM : 7|24@0+ (1,0) [0|16777215] "" XXX
+ SG_ RPM : 7|16@0+ (1,0) [0|65535] "RPM" XXX
